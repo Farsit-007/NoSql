@@ -10,6 +10,7 @@
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/**/*.ts",
+    "create-module": "ts-node src/script/createModule.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "format": "prettier . --write"
   },
@@ -21,6 +22,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.1",
     "nodemon": "^3.1.10",
+    "winston": "^3.17.0",
     "zod": "^3.25.51"
   },
   "devDependencies": {

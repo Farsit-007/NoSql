@@ -10,6 +10,7 @@ import handleValidationError from '../errors/handleValidationError';
 import handleCastError from '../errors/handleCastError';
 import handleDuplicateError from '../errors/handleDuplicateError';
 import AppError from '../errors/AppError';
+import logger from '../../Logger/logger';
 
 
 export const globalErrorHandler: ErrorRequestHandler = (
@@ -66,7 +67,7 @@ export const globalErrorHandler: ErrorRequestHandler = (
       },
     ];
   }
-
+ logger.error(`Error: ${err.message}`, { stack: err.stack });
   res.status(statusCode).json({
     success: false,
     message,
